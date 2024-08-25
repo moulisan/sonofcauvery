@@ -10,7 +10,7 @@ __pycache__/
 
 # Generated files
 *.json
-*.html
+
 
 # Operating system files
 .DS_Store
