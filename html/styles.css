@@ -1,102 +1,417 @@
+/* =============================================================================
+   sonofcauverybook.in - Classical Literary Aesthetic
+   ============================================================================= */
+
+/* Color Palette */
+:root {
+    --parchment:    #F5F0E6;
+    --ivory:        #FFFEF8;
+    --ink:          #2A1F14;
+    --muted:        #5C4D3D;
+    --accent:       #8B4513;
+    --accent-hover: #6B3410;
+    --border:       #D4C9B8;
+    --gold:         #B8860B;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 22px;
+    scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+    font-family: 'Crimson Pro', Georgia, serif;
+    line-height: 1.8;
+    color: var(--ink);
+    background-color: var(--parchment);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('damask-pattern.jpg');
+    background-repeat: repeat;
+    background-size: 400px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
 }
 
-header {
-  background: #35424a;
-  color: #ffffff;
-  padding: 30px 0;
-  border-bottom: #e8491d 3px solid;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink);
+    margin-top: 0;
 }
 
-header h1 {
-  margin: 0;
-  text-align: center;
+h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
 }
 
-main {
-  padding: 40px 0;
-  max-width: 700px;
-  margin: 0 auto;
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
 }
 
 p {
-  margin-bottom: 20px;
-}
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    hyphens: auto;
 }
 
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+em {
+    color: var(--muted);
+}
+
+/* Site Title */
+.site-title {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: var(--ink);
+    color: var(--parchment);
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.site-title a {
+    color: var(--parchment);
+    text-decoration: none;
+}
+
+.site-title a:hover {
+    color: var(--gold);
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2.5rem 1rem 2rem;
+    border-bottom: 2px solid var(--border);
+    background-color: var(--ivory);
+}
+
+header h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0;
+}
+
+/* Chapter Title */
+.chapter-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.03em;
+}
+
+/* Main Content */
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 3rem;
+}
+
+/* Landing Page */
+.landing-page {
+    max-width: 800px;
+}
+
+.blurb {
+    background-color: var(--ivory);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.blurb p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.blurb p:last-child {
+    margin-bottom: 0;
+    font-style: italic;
+    color: var(--muted);
+}
+
+/* Book Grid */
 .book-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .book-card {
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  overflow: hidden;
+    background-color: var(--ivory);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .book-card-header {
-  background: #8B4513; /* SaddleBrown - a rich, earthy brown color */
-  color: white;
-  padding: 15px;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
+    background-color: var(--accent);
+    color: var(--ivory);
+    padding: 1rem;
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.05em;
 }
 
 .book-card-body {
-  padding: 20px;
-  text-align: center;
+    padding: 1.25rem;
+    text-align: center;
 }
 
+/* Buttons */
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #D2691E; /* Chocolate brown */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--gold);
+    color: var(--ivory);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
 }
 
 .btn:hover {
-  background-color: #d13d15;
+    background-color: var(--accent-hover);
+    color: var(--ivory);
 }
 
+.btn.disabled {
+    background-color: #808080;
+    cursor: not-allowed;
+}
+
+/* Back Link */
+.back-link {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.back-link a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1rem;
+    color: var(--accent);
+}
+
+.back-link a:hover {
+    color: var(--accent-hover);
+}
+
+/* Table of Contents */
+.toc-link {
+    display: block;
+    padding: 0.9rem 1rem;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.12rem;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    transition: all 0.2s ease;
+}
+
+.toc-link:hover {
+    background-color: var(--ivory);
+    color: var(--accent);
+    padding-left: 1.5rem;
+}
+
+.toc-link:last-child {
+    border-bottom: none;
+}
+
+/* Chapter Content */
+article {
+    max-width: 100%;
+}
+
+article p {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    line-height: 1.85;
+}
+
+article p:first-of-type::first-letter {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 3.5rem;
+    float: left;
+    line-height: 1;
+    margin-right: 0.5rem;
+    margin-top: 0.1rem;
+    color: var(--accent);
+}
+
+/* Navigation Links */
+.navigation-links {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.95rem;
+}
+
+.navigation-links a {
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+}
+
+.navigation-links a:hover {
+    color: var(--accent-hover);
+}
+
+/* Chapter Navigation */
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.9rem;
+}
+
+.chapter-nav a {
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.chapter-nav a:hover {
+    background-color: var(--ivory);
+    border-color: var(--accent);
+}
+
+.chapter-nav .prev::before {
+    content: "\2190 ";
+}
+
+.chapter-nav .next::after {
+    content: " \2192";
+}
+
+/* Footer */
 footer {
-  background: #35424a;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
+    background-color: var(--ink);
+    color: var(--parchment);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
 }
 
-@media(max-width: 768px) {
-  .book-grid {
-      grid-template-columns: 1fr;
-  }
-  
-  .container,
-  main {
-    width: 90%;
-    padding: 0 15px;
-  }
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+footer a {
+    color: var(--gold);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .site-title {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem 2rem;
+    }
+
+    .book-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .blurb {
+        padding: 1.5rem;
+    }
+
+    article p:first-of-type::first-letter {
+        font-size: 2.75rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+
+    .site-title, footer, .navigation-links, .chapter-nav {
+        display: none;
+    }
+
+    main {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    article p {
+        text-align: justify;
+    }
 }
