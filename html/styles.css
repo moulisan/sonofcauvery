@@ -6,7 +6,7 @@
 :root {
     --parchment:    #F5F0E6;
     --ivory:        #FFFEF8;
-    --ink:          #2A1F14;
+    --ink:          #1A120A;
     --muted:        #5C4D3D;
     --accent:       #8B4513;
     --accent-hover: #6B3410;
@@ -47,7 +47,7 @@ body::before {
     background-image: url('damask-pattern.jpg');
     background-repeat: repeat;
     background-size: 400px;
-    opacity: 0.15;
+    opacity: 0.09;
     pointer-events: none;
     z-index: -1;
 }
