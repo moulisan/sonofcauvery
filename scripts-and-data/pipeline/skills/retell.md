@@ -4,7 +4,23 @@ Take a pasted English translation of a Kalki chapter and produce a Mouli-style a
 
 ## What this is
 
-Abridgement, not creative rewriting. Stay close to Kalki's original sequence. Retain every plot beat in original order. Cut ornament, repetition, and padding. Do not invent scenes, add interiority not in the source, rearrange beats, or add closing hooks not in the original.
+Abridgement and tone simplification only. The two and only two freedoms are:
+1. **Abridge** — cut ornament, repetition, and padding, modelled on the style of the published chapters at sonofcauverybook.in
+2. **Simplify tone** — plain, direct English, modelled on the published chapters at sonofcauverybook.in
+
+Everything else must come directly from the translation. No exceptions.
+
+## Hard constraints — read before writing a single word
+
+- **No assumptions.** If something is not in the translation, it is not in the output.
+- **No reasoning or deduction.** Do not infer what a character must be feeling, thinking, or intending beyond what the translation explicitly states. Do not connect dots that the translation does not connect.
+- **No additions.** No new details, no new context, no explanatory asides, no scene-setting that is not in the source.
+- **No reinterpretation.** If the translation says X, write X. Do not write "what X means" or "what X implies."
+- **No rearrangement.** Every beat stays in the exact order it appears in the translation.
+- **No invented interiority.** A character's thoughts and feelings may only appear if the translation states them. Do not write "he wondered if..." or "she felt that..." unless those words are in the translation.
+- **No closing hooks.** End exactly where the translation ends. Do not add a final sentence to heighten tension or round off the chapter.
+
+If you are uncertain whether something in your draft is in the translation or was inferred — delete it.
 
 ## Input
 
